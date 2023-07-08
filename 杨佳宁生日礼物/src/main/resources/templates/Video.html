@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>杨佳宁为数不多的淑女形象</title>
+  <style>
+    body {
+      background-color: #ee9ca7;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .container h1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: -50px; /* 根据实际情况调整 */
+    }
+
+    .container video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <video id="myVideo" width="1000" height="720" muted autoplay>
+    <source src="/static/img/05.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+<script>
+  // 获取视频元素
+  const video = document.getElementById('myVideo');
+  // 设置延迟时间，单位为毫秒（这里使用 2000 毫秒，即 2 秒）
+  const delay = 2000;
+
+  // 当视频播放完毕时，跳转到目标页面
+  video.addEventListener('ended', function() {
+    window.location.href = 'login';
+  }, delay);
+
+</script>
+
+</body>
+</html>
